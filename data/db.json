@@ -1,0 +1,192 @@
+{
+  "users": [
+    {
+      "id": "usr_admin",
+      "username": "Admin",
+      "displayName": "Admin (ผู้ดูแลระบบ)",
+      "passwordHash": "$2b$10$VB81buymiCfY/ELvEq9thesv98BgQlbkXHpBlUvBin/xJTvLgo54K",
+      "role": "admin",
+      "email": "admin@punx.cyber",
+      "phoneNumber": "081-999-8888",
+      "citizenId": "1-1004-99887-12-3",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "bio": "ผู้ดูแลระบบ PunX Cyber // สิทธิ์สูงสุด 🛡️",
+      "isVerified": true,
+      "isSuspended": false,
+      "createdAt": "2026-01-01T08:00:00.000Z"
+    },
+    {
+      "id": "usr_somchai",
+      "username": "somchai_pantip",
+      "displayName": "สมชาย เซียนพันทิป",
+      "passwordHash": "$2b$10$pUP9M3oFYRC9VrSs8j.woehTCN9/6ct0feYOPSk4VPOsDGfNexByW",
+      "role": "user",
+      "email": "somchai.pantip@punx.cyber",
+      "phoneNumber": "089-123-4567",
+      "citizenId": "3-1005-55443-88-1",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150",
+      "bio": "สมาชิกรุ่นบุกเบิก ชอบอ่านห้องสีลมและหว้ากอ แลกเปลี่ยนความเห็นอย่างสร้างสรรค์",
+      "isVerified": true,
+      "isSuspended": false,
+      "createdAt": "2026-02-10T10:30:00.000Z"
+    },
+    {
+      "id": "usr_trendy",
+      "username": "nong_x_trendy",
+      "displayName": "น้องเอ็กซ์ สายเทรนด์",
+      "passwordHash": "$2b$10$pUP9M3oFYRC9VrSs8j.woehTCN9/6ct0feYOPSk4VPOsDGfNexByW",
+      "role": "user",
+      "email": "trendy.girl@punx.cyber",
+      "phoneNumber": "062-876-5432",
+      "citizenId": "1-2003-88776-90-2",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+      "bio": "ชอบอัปเดตเทรนด์ X ไว ปั่นมีม ดูซีรีส์เกาหลี คุยกันได้ทุกเรื่องงง ✨",
+      "isVerified": false,
+      "isSuspended": false,
+      "createdAt": "2026-03-01T14:20:00.000Z"
+    }
+  ],
+  "threads": [
+    {
+      "id": "th_1",
+      "authorId": "usr_admin",
+      "title": "📌 [ประกาศกฎกติกา] ยินดีต้อนรับสู่ PunX Cyber เว็ปบอร์ดไซเบอร์พังค์ 007",
+      "content": "ยินดีต้อนรับสมาชิกทุกท่านเข้าสู่ PunX Cyber! ⚡💜💙\n\nแพลตฟอร์มนี้รวมจุดเด่นของ **พันทิป (Pantip)** เช่น การแยกหมวดหมู่ห้องชัดเจน, ระบบอารมณ์ความรู้สึกพันทิป (ถูกใจ/หลงรัก/ขำกลิ้ง/ซึ้ง/สยอง/ทึ่ง), หมายเลขความคิดเห็น และจุดเด่นของ **X (Twitter)** เช่น การติดตามแท็ก #Trending, การรีโพสต์, ฟีดที่รวดเร็วทันใจ\n\n🔒 **นโยบายคุ้มครองข้อมูลส่วนบุคคล (PDPA & Privacy Masking):**\nระบบจะทำการ Masking เบอร์โทรศัพท์และอีเมลของสมาชิกสาธารณะอัตโนมัติ เพื่อความปลอดภัยสูงสุด\n\nขอให้ทุกท่านร่วมพูดคุยกันด้วยความสุภาพและสร้างสรรค์ครับ!",
+      "room": "general",
+      "threadType": "discussion",
+      "tags": [
+        "#ประกาศจากแอดมิน",
+        "#PunXCyber",
+        "#กฎระเบียบ"
+      ],
+      "isPinned": true,
+      "isLocked": false,
+      "views": 342,
+      "reactions": {
+        "like": [
+          "usr_somchai",
+          "usr_trendy"
+        ],
+        "impressed": [
+          "usr_somchai"
+        ]
+      },
+      "reposts": [
+        "usr_trendy"
+      ],
+      "bookmarks": [
+        "usr_somchai"
+      ],
+      "createdAt": "2026-03-01T09:00:00.000Z",
+      "updatedAt": "2026-03-01T09:00:00.000Z"
+    },
+    {
+      "id": "th_2",
+      "authorId": "usr_somchai",
+      "title": "แชร์ประสบการณ์ทำงานสายเทคโนโลยี 5 ปี คุ้มไหมที่จะย้ายงานเพื่ออัพเงินเดือน? (อัปเดตเพิ่มเติม)",
+      "content": "สวัสดีครับเพื่อนๆ ห้องสีลม ช่วงนี้เห็นเทรนด์หลายคนเปลี่ยนงานบ่อยเพื่อเพิ่มฐานเงินเดือน 30-50%\n\nจากประสบการณ์ส่วนตัวที่ทำงานเป็น Senior Software Engineer มา 5 ปี พบว่าการย้ายงานช่วยเรื่องเงินเดือนจริง แต่สิ่งที่ต้องแลกคือความน่าเชื่อถือในทีมเดิม วัฒนธรรมองค์กรใหม่ และความเสี่ยงช่วงทดลองงาน\n\nเพื่อนๆ คิดว่าในภาวะเศรษฐกิจปัจจุบัน การอยู่ยาวเพื่อเติบโตเป็น Lead หรือย้ายเก็บเกี่ยวประสบการณ์แบบไหนตอบโจทย์กว่ากันครับ?",
+      "room": "silom",
+      "threadType": "discussion",
+      "tags": [
+        "#มนุษย์เงินเดือน",
+        "#สายไอที",
+        "#หางาน",
+        "#สีลม"
+      ],
+      "isPinned": false,
+      "isLocked": false,
+      "views": 189,
+      "reactions": {
+        "like": [
+          "usr_trendy"
+        ],
+        "love": [
+          "usr_admin"
+        ]
+      },
+      "reposts": [
+        "usr_trendy"
+      ],
+      "bookmarks": [
+        "usr_admin"
+      ],
+      "createdAt": "2026-03-02T11:15:00.000Z",
+      "updatedAt": "2026-10-15T16:25:28.226Z"
+    },
+    {
+      "id": "th_3",
+      "authorId": "usr_trendy",
+      "title": "สรุปประเด็นร้อนติดเทรนด์วันนี้! ทำไมซีรีส์เรื่องใหม่ถึงไวรัลทั่วโซเชียล? 🔥",
+      "content": "ทุกคนนนน ใครได้ดูตอนล่าสุดแล้วบ้างงง คือเนื้อเรื่องหักมุมมาก บทคือเฉลยแบบที่ไม่มีใครคาดคิดเลย!\n\nนักแสดงเล่นดีจนน้ำตาซึม แสง สี มุมกล้อง โทนม่วงฟ้า aesthetic สวยมากก ใครยังไม่ได้ดูรีบไปตำด่วน ไม่งั้นจะคุยกับเขาไม่รู้เรื่องแน่ๆ! 🍿✨\n\n#ซีรีส์เด็ด #รีวิวซีรีส์ #เทรนด์วันนี้",
+      "room": "chalermthai",
+      "threadType": "microblog",
+      "tags": [
+        "#ซีรีส์เด็ด",
+        "#รีวิวซีรีส์",
+        "#เทรนด์วันนี้",
+        "#เฉลิมไทย"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800",
+      "isPinned": false,
+      "isLocked": false,
+      "views": 265,
+      "reactions": {
+        "laugh": [
+          "usr_somchai"
+        ],
+        "love": [
+          "usr_admin",
+          "usr_somchai"
+        ]
+      },
+      "reposts": [
+        "usr_somchai",
+        "usr_admin"
+      ],
+      "bookmarks": [],
+      "createdAt": "2026-03-03T15:40:00.000Z",
+      "updatedAt": "2026-03-03T15:40:00.000Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": "cm_1",
+      "threadId": "th_1",
+      "authorId": "usr_somchai",
+      "content": "ชอบฟังก์ชันปกป้องเบอร์โทรศัพท์มากครับ ในยุคแก๊งคอลเซ็นเตอร์ระบาดแบบนี้ ปลอดภัยขึ้นเยอะเลย",
+      "pantipEmotion": "love",
+      "upvotes": [
+        "usr_admin",
+        "usr_trendy"
+      ],
+      "commentNumber": 1,
+      "createdAt": "2026-03-01T10:00:00.000Z",
+      "updatedAt": "2026-03-01T10:00:00.000Z"
+    },
+    {
+      "id": "cm_2",
+      "threadId": "th_2",
+      "authorId": "usr_trendy",
+      "content": "เห็นด้วยเลยค่ะ ย้ายบ่อยเกินไป เรซูเม่ดูไม่นิ่ง แต่ถ้าอยู่ที่เดิมเกิน 3 ปีแล้วเงินเดือนไม่ขยับ ก็ควรลองสัมภาษณ์ดูโอกาสใหม่ๆ นะคะ",
+      "pantipEmotion": "like",
+      "upvotes": [
+        "usr_somchai"
+      ],
+      "commentNumber": 1,
+      "createdAt": "2026-03-02T13:20:00.000Z",
+      "updatedAt": "2026-03-02T13:20:00.000Z"
+    }
+  ],
+  "reports": [],
+  "auditLogs": [
+    {
+      "id": "log_1",
+      "adminId": "usr_admin",
+      "adminName": "Admin (ผู้ดูแลระบบ)",
+      "action": "PIN_THREAD",
+      "target": "th_1",
+      "details": "ปักหมุดกระทู้กฎกติกาการใช้งานบอร์ด",
+      "createdAt": "2026-03-01T09:05:00.000Z"
+    }
+  ]
+}

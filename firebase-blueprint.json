@@ -1,0 +1,148 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Public user profile information",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "username": { "type": "string", "maxLength": 50, "pattern": "^[a-zA-Z0-9_]+$" },
+        "displayName": { "type": "string", "maxLength": 100 },
+        "avatar": { "type": "string", "maxLength": 500 },
+        "bio": { "type": "string", "maxLength": 500 },
+        "role": { "type": "string", "enum": ["user", "admin"] },
+        "isVerified": { "type": "boolean" },
+        "isSuspended": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "username", "displayName", "role"]
+    },
+    "UserPrivate": {
+      "title": "UserPrivate",
+      "description": "Sensitive personally identifiable information isolated for PDPA & privacy",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128 },
+        "email": { "type": "string", "maxLength": 200 },
+        "phoneNumber": { "type": "string", "maxLength": 20 },
+        "citizenId": { "type": "string", "maxLength": 30 },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "email"]
+    },
+    "Thread": {
+      "title": "Thread",
+      "description": "Discussion topics and microblogs in PunX",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "authorId": { "type": "string", "maxLength": 128 },
+        "title": { "type": "string", "maxLength": 250 },
+        "content": { "type": "string", "maxLength": 10000 },
+        "room": { "type": "string", "maxLength": 50 },
+        "threadType": { "type": "string", "enum": ["discussion", "question", "review", "microblog"] },
+        "tags": { "type": "array" },
+        "imageUrl": { "type": "string", "maxLength": 500 },
+        "isPinned": { "type": "boolean" },
+        "isLocked": { "type": "boolean" },
+        "views": { "type": "number" },
+        "reactions": { "type": "object" },
+        "reposts": { "type": "array" },
+        "bookmarks": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "authorId", "title", "content", "room"]
+    },
+    "Comment": {
+      "title": "Comment",
+      "description": "Pantip style comments and replies on threads",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "threadId": { "type": "string", "maxLength": 128 },
+        "authorId": { "type": "string", "maxLength": 128 },
+        "content": { "type": "string", "maxLength": 5000 },
+        "imageUrl": { "type": "string", "maxLength": 500 },
+        "pantipEmotion": { "type": "string", "maxLength": 50 },
+        "upvotes": { "type": "array" },
+        "commentNumber": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "threadId", "authorId", "content", "commentNumber"]
+    },
+    "Report": {
+      "title": "Report",
+      "description": "User reports for moderation",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "reporterId": { "type": "string", "maxLength": 128 },
+        "targetType": { "type": "string", "enum": ["thread", "comment", "user"] },
+        "targetId": { "type": "string", "maxLength": 128 },
+        "targetTitle": { "type": "string", "maxLength": 250 },
+        "reason": { "type": "string", "maxLength": 1000 },
+        "status": { "type": "string", "enum": ["pending", "resolved", "dismissed"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "reporterId", "targetId", "reason", "status"]
+    },
+    "AdminRecord": {
+      "title": "AdminRecord",
+      "description": "Lookup document to verify admin status safely",
+      "type": "object",
+      "properties": {
+        "adminId": { "type": "string", "maxLength": 128 },
+        "email": { "type": "string", "maxLength": 200 },
+        "addedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["adminId"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "Moderator action audit trail",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "adminId": { "type": "string", "maxLength": 128 },
+        "adminName": { "type": "string", "maxLength": 100 },
+        "action": { "type": "string", "maxLength": 100 },
+        "target": { "type": "string", "maxLength": 200 },
+        "details": { "type": "string", "maxLength": 1000 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "adminId", "action", "target"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Public user profile documents"
+    },
+    "/users/{userId}/private/info": {
+      "schema": "UserPrivate",
+      "description": "Protected personal data (PII) restricted to the owner and admin"
+    },
+    "/threads/{threadId}": {
+      "schema": "Thread",
+      "description": "Discussion and microblog threads"
+    },
+    "/threads/{threadId}/comments/{commentId}": {
+      "schema": "Comment",
+      "description": "Comments nested under their parent thread"
+    },
+    "/reports/{reportId}": {
+      "schema": "Report",
+      "description": "User reports queue for admins"
+    },
+    "/admins/{adminId}": {
+      "schema": "AdminRecord",
+      "description": "Admin identity records"
+    },
+    "/auditLogs/{logId}": {
+      "schema": "AuditLog",
+      "description": "Audit trail of admin actions"
+    }
+  }
+}

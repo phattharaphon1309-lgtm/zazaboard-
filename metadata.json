@@ -1,0 +1,8 @@
+{
+  "name": "Remix PunX - เว็ปบอร์ดพันทิปผสมเอ็กซ์",
+  "description": "แพลตฟอร์มเว็ปบอร์ดคอมมูนิตี้ไฮบริดสไตล์พันทิปและเอ็กซ์ (X) ธีมสีม่วงฟ้า พร้อมระบบสมาชิก การพิสูจน์สิทธิ์ การปิดบังข้อมูลส่วนบุคคล และแดชบอร์ดผู้ดูแลระบบ",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
